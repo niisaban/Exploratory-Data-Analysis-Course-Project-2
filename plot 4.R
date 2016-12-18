@@ -18,6 +18,6 @@ aggTotals <- aggregate(Emissions ~ year,NEISCCsub, sum)
 ## plot 4
 g <- ggplot(aggTotals, aes(factor(year), Emissions, color = Year))
 g <- g + geom_bar(stat="identity") + xlab("year") + ylab(expression('Total PM'[2.5]*" Emissions")) + ggtitle('Total Emissions from coal sources from 1999 to 2008 in Kilotons')
+print(g)
 dev.copy(png, file="plot3.png", height=640, width=480)
-print (g)
 dev.off()
