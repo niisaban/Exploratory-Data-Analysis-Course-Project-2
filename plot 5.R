@@ -12,6 +12,6 @@ aggTotals <- aggregate(Emissions ~ year,NEIsub2, sum)
 ## plot 5
 g <- ggplot(aggTotals, aes(factor(year), Emissions, color = Year))
 g <- g + geom_bar(stat="identity") + xlab("year") + ylab(expression('Total PM'[2.5]*" Emissions")) + ggtitle('Change in Total Emissions from 1999 to 2008 from motor vehicles in Baltimore City')
-dev.copy(png, file="plot5.png", height=640, width=480)
 print(g)
+dev.copy(png, file="plot5.png", height=640, width=480)
 dev.off()
