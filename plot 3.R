@@ -12,6 +12,6 @@ aggTotalsType <- aggregate(Emissions ~ year + type,NEIsub, sum)
 ## Plot 3
 g <- ggplot(aggTotalsType, aes(year, Emissions, color = type))
 g <- g + geom_line() + xlab("year") + ylab(expression('Total PM'[2.5]*" Emissions")) + ggtitle('Total Emissions in Baltimore City, Maryland from 1999 to 2008')
-dev.copy(png, file="plot3.png", height=640, width=480)
 print (g)
+dev.copy(png, file="plot3.png", height=640, width=480)
 dev.off()
